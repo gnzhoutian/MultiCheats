@@ -121,7 +121,7 @@ namespace MB2MultiCheats
         public override ExplainedNumber CalculateTownTax(Town town, bool includeDescriptions = false)
         {
             ExplainedNumber result = base.CalculateTownTax(town, includeDescriptions);
-            if ((town.IsTown || town.IsCastle) && town.Governor?.Clan == Clan.PlayerClan && MySettings.Instance.GainSettlementTaxByGovernor > 0)
+            if ((town.IsTown || town.IsCastle) && town.Governor?.Clan == Clan.PlayerClan && MySettings.Instance.GainSettlementTaxByGovernor > 1)
             {
                 if (town.Governor.GetPerkValue(DefaultPerks.Steward.PriceOfLoyalty))
                 {

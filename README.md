@@ -77,6 +77,7 @@
     - `<MB2_INSTALL_DIR>\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\`
     - `<MB2_INSTALL_DIR>\Modules\Bannerlord.MBOptionScreen\bin\Win64_Shipping_Client\`
     - `<MB2_INSTALL_DIR>\Modules\Bannerlord.UIExtenderEx\bin\Win64_Shipping_Client\`
+- 在Git-Bash中执行打包脚本: `./make7z.sh 1.4.0` 或 `./make7z.sh 1.4.2-debug`
 
 ## 附录二、属性专精参考表
 

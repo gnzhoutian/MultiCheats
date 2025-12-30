@@ -96,7 +96,7 @@ namespace MB2MultiCheats
         [SettingPropertyGroup("{=mcConfigSettlement}Settlement", GroupOrder = 4)]
         public int DailySettlementBoostBonus { get; set; } = 0;
 
-        [SettingPropertyInteger("{=mcConfigSettlementText3}Gain settlement tax by governor", 0, 9, Order = 2, RequireRestart = false,
+        [SettingPropertyInteger("{=mcConfigSettlementText3}Gain settlement tax by governor", 1, 100, Order = 2, RequireRestart = false,
             HintText = "{=mcConfigSettlementDesc3}Clan settlements daily tax gain by governor, the default is 1x, and 2x is recommended")]
         [SettingPropertyGroup("{=mcConfigSettlement}Settlement", GroupOrder = 4)]
         public int GainSettlementTaxByGovernor { get; set; } = 0;
