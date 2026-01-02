@@ -1,0 +1,87 @@
+> This MOD improves the player's ability in all aspects, involving adjustments such as upgrade speed, attack and defense bonus, stamina consumption, backpack capacity, smithing, alchemy, noise visibility, bow crosshairs, etc. Welcome to try it. Translated by Google.
+
+[color=#ff7700][size=4]Introduction[/size][/color]
+
+This module is researched and integrated during personal play, and is adapted to the latest version. 
+Follow the MIT protocol, the implementation method is concise. Personalized modifications are welcome.
+The translation is translated by Google, please forgive me for any shortcomings.
+
+[color=#ff7700][size=4]Installation method[/size][/color]
+
+After the module is unzipped and installed, the directory is as follows:
+
+[i][code]<KC2_INSTALL_DIR>/
+└── Mods
+    └── KC2MultiCheats
+        ├── Data
+        │   └── KC2MultiCheats.pak
+        ├── mod.cfg
+        ├── mod.manifest
+        └── README.md
+[/code][/i]
+
+[color=#ff7700][size=4]Function description[/size][/color]
+
+Format description: Basic capacity is increased by 8 times (70 -> 560), which means that the original value is 70 and the MOD value is adjusted to 560
+
+- Henry's exclusive adjustment
+    - LifeSaver Perk
+        1. Fast upgrade: Experience gain 32 times
+        2. Attack defense: Melee damage 1.6 times, arrow damage 1.6 times, armor increased by 64 points
+        3. Stamina adjustment: recovery increased by 6.4 times, consumption reduced by 100 times (attack, dodging, aiming, sprinting)
+    - GoodOldPebbles Perk
+        4. Attribute adjustment: (20->40, 15->30)
+    - SsecretsOfEquilibriumII Perk
+        5. Alchemy adjustment: quality (0.2 -> 0.6), quantity (0 -> 6)
+        
+- Global general adjustment
+    1. Backpack capacity: basic capacity increased by 8 times (70 -> 560), maximum capacity increased by 2 times (600 -> 1200)
+    2. Horse adjustment: dash buffer lengthened (21->100, 7->20), overweight limit allowed (1 -> 100)
+    3. Blacksmith maintenance: repair tool capacity increased by 5 times (600 -> 3000), hammer maximum effect increased by 5 times (0.02 -> 0.1)
+    4. Item adjustment: Gold accessories attribute adjustment, conspicuous/visibility (0 -> -10), noise (0 -> -20)
+    5. Bow adjustment: open the crosshair
+    
+[i][b][color=#ff7700][size=3]原始中文说明[/size][/color][/b]
+格式说明：基础容量扩展8倍（70 -> 560），表示原版数值为70，MOD调整为560
+
+- 亨利专属调整
+    - 救星Perk
+        1. 快速升级：经验增益32倍
+        2. 攻击防御：近战伤害1.6倍，箭矢伤害1.6倍，护甲增加64点
+        3. 耐力调整：恢复提升6.4倍，消耗降低100倍（攻击、闪避、瞄准、冲刺）
+    - 小灰Perk 
+        4. 属性增益：（20->40, 15->30）
+    - 平衡的秘密IIPerk
+        5. 炼金增益：质量（0.2 -> 0.6），数量（0 -> 6）
+- 全局通用调整
+    1. 背包容量：基础容量扩展8倍（70 -> 560），最大容量扩展2倍（600 -> 1200）
+    2. 马匹调整：冲刺缓冲区加长（21->100, 7->20），允许超重上限（1 -> 100）
+    3. 打铁维护：修复工具容量扩展5倍（600 -> 3000），锤击最大效果扩展5倍（0.02 -> 0.1）
+    4. 物品调整：金制饰品属性调整，显眼/可见（0 -> -10），噪音（0 -> -20）
+    5. 弓箭调整：开启准星
+[/i]
+
+[color=#ff7700][size=4]Appendix 1. How to make a MOD[/size][/color]
+
+1. pak file decompression: decompress through 7-zip
+2. pak internal file naming requirements: [color=#00ff00]<table_name>__<mod_name>.xml
+3. pak file compression: compress in zip format, without timestamp, rename to pak suffix, the following two methods are recommended
+    3.1. Use the tool [url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/78]KCD PAK Builder[/url], this method is highly recommended
+    3.2. Use the 7-zip command line, -mtm=off to disable modification time, for example: `7z a -r -tzip -mtm=off KC2MultiCheats.pak Libs`
+[/color]
+
+[color=#ff7700][size=4]Appendix 2. Welcome to try my other MODs[/size][/color]
+
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/1763]【天国：拯救】 KC Multi Cheats[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/402]【天国：拯救2】 KC2 Multi Cheats[/url]
+[url=https://www.nexusmods.com/mountandblade2bannerlord/mods/7470]【骑马与砍杀2】 MB2 Multi Cheats[/url]
+
+
+[color=#ff7700][size=4]Thanks[/size][/color]
+
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/78]重要工具 - KCD PAK Builder[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/511]重要工具 - 【天国：拯救2】眩晕优化[/url]
+[url=https://wiki.fireundubh.com/kingdomcome2/rpg-parameters]重要参考 - 【天国：拯救2】原版参数查询 rpg-parameters[/url]
+[url=https://wiki.fireundubh.com/kingdomcome/rpg-parameters]重要参考 - 【天国：拯救】原版参数查询 rpg-parameters[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/324]重要参考 - Slower Leveling[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/87]重要参考 - 【天国：拯救2】物品ID本地化[/url]
