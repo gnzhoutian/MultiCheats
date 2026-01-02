@@ -1,0 +1,8 @@
+/src/.vs/
+/src/obj/
+/src/bin/
+
+/tmpbuild/
+/archives/*-debug.7z
+
+**/~*
