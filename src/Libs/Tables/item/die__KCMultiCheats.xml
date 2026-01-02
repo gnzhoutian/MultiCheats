@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="die" version="1">
+    <header>
+      <column name="item_id" type="uuid" />
+      <column name="side_value_1" type="integer" />
+      <column name="side_value_2" type="integer" />
+      <column name="side_value_3" type="integer" />
+      <column name="side_value_4" type="integer" />
+      <column name="side_value_5" type="integer" />
+      <column name="side_value_6" type="integer" />
+      <column name="side_weight_1" type="real" />
+      <column name="side_weight_2" type="real" />
+      <column name="side_weight_3" type="real" />
+      <column name="side_weight_4" type="real" />
+      <column name="side_weight_5" type="real" />
+      <column name="side_weight_6" type="real" />
+    </header>
+    <rows>
+      <row item_id="bd819743-3e32-474e-8333-bebe92b16e98" side_value_1="" side_value_2="" side_value_3="" side_value_4="" side_value_5="" side_value_6="" side_weight_1="6" side_weight_2="0" side_weight_3="0" side_weight_4="0" side_weight_5="2" side_weight_6="0" />
+    </rows>
+  </table>
+</database>

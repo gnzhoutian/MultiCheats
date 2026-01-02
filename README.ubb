@@ -1,0 +1,92 @@
+> This MOD improves the player's ability in all aspects, involving adjustments such as upgrade speed, attack speed, stamina consumption, backpack capacity, item repair, lucky dice, bow crosshairs, etc. Welcome to try it. Translated by Google.
+
+[color=#ff7700][size=4]Introduction[/size][/color]
+
+This module is researched and integrated during personal play, and is adapted to the latest version. 
+Follow the MIT protocol, the implementation method is concise. Personalized modifications are welcome.
+The translation is translated by Google, please forgive me for any shortcomings.
+
+[color=#ff7700][size=4]Installation method[/size][/color]
+
+After the module is unzipped and installed, the directory is as follows:
+
+[i][code]<KC_INSTALL_DIR>/
+└── Mods
+    └── KCMultiCheats
+        ├── Data
+        │   └── KCMultiCheats.pak
+        ├── mod.cfg
+        ├── mod.manifest
+        └── README.md
+[/code][/i]
+
+[color=#ff7700][size=4]Function description[/size][/color]
+
+Format description: Basic capacity increased by 10 times (66 -> 660), which means that the original value is 66, and the MOD value is adjusted to 660
+
+- FlowerPower Perk Adjustment
+    1. Effective mechanism: Global effect
+    2. Fast upgrade: Experience gain 64 times
+    3. Attack defense: Melee damage 1.6 times
+    4. Stamina adjustment: Recovery increased by 6.4 times, consumption reduced by 100 times (attack, sprint)
+
+- Global general adjustment
+    1. Attack speed: attack speed gain 3 times (0.4 -> 1.2)
+    2. Herb picking adjustment: Herb picking experience increased by 10 times (7 -> 70)
+    3. Keep clean: Duration cycle increased by 5 times (5000 -> 20000)
+    4. Backpack weight: Basic capacity increased by 10 times (66 -> 660), horse allowed overweight limit (1 -> 100)
+    5. Item repair: Remove the minimum item repair limit (0.6 -> ""), repair tool capacity increased 10 times (200 -> 2000)
+    6. Lucky dice: only 1 and 5 points, can be found in ancient map 1, treasure map (6, 12, 16, 18, 24)
+    7. Equipment adjustment: Bianca ring attribute adjustment, conspicuous/visible/noise (0 -> -27), charm (1 -> 54), price (540 -> 54000)
+    8. Bow adjustment: open crosshair
+
+[i][b][color=#ff7700][size=3]原始中文说明[/size][/color][/b]
+
+格式说明：基础容量提升10倍（66 -> 660），表示原版数值为66，MOD调整为660
+
+- 花之力Perk调整
+    1. 生效机制：全局生效
+    2. 快速升级：经验增益64倍
+    3. 伤害调整：近战伤害1.6倍
+    4. 耐力调整：恢复提升6.4倍，消耗降低100倍（攻击、冲刺）
+    
+- 全局通用调整
+    1. 攻击速度：敌我攻速增益提升3倍（0.4 -> 1.2）
+    2. 采药调整：采药经验提升10倍（7 -> 70）
+    3. 保持清洁：持续周期提升5倍（5000 -> 20000）
+    4. 背包负重：基础容量提升10倍（66 -> 660），马匹允许超重上限（1 -> 100）
+    5. 物品修复：去除物品最低修复限制（0.6 -> ""），修复工具容量提升10倍（200 -> 2000）
+    6. 幸运之骰：只出1、5点，在古地图1、藏宝图（6、12、16、18、24）可以找到
+    7. 装备调整：比安卡戒指属性调整，显眼/可见/噪音（0 -> -27），魅力（1 -> 54），价格（540 -> 54000）
+    8. 弓箭调整：开启准星
+[/i]
+
+[color=#ff7700][size=4]Appendix 1. How to make a MOD[/size][/color]
+
+1. pak file decompression: decompress through 7-zip
+2. pak internal file naming requirements: [color=#00ff00]<table_name>__<mod_name>.xml
+3. pak file compression: compress in zip format, rename to pak suffix, recommended use the tool [url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/78]KCD PAK Builder[/url][/color]
+
+
+[color=#ff7700][size=4]Appendix 2. Welcome to try my other MODs[/size][/color]
+
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/1763]【天国：拯救】 KC Multi Cheats[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/402]【天国：拯救2】 KC2 Multi Cheats[/url]
+[url=https://www.nexusmods.com/mountandblade2bannerlord/mods/7470]【骑马与砍杀2】 MB2 Multi Cheats[/url]
+
+
+[color=#ff7700][size=4]Thanks[/size][/color]
+
+[url=https://wiki.fireundubh.com/kingdomcome/rpg-parameters]重要参考 - 原版参数查询 rpg-parameters[/url]
+[url=https://wiki.nexusmods.com/index.php/Modding_guide_for_KCD]重要参考 - Modding guide for KCD[/url]
+[url=https://forums.nexusmods.com/topic/6409661-tutorial-tweaking-rpg-parameters/]重要参考 - Tutorial Tweaking RPG Parameters[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/763]重要参考 - Lucky Lucky Die[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/167]重要参考 - Level Up[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/1070]重要参考 - Better Combat[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/390]重要参考 - Stay Clean Longer[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/106]重要工具 - 控制台 Cheat[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance/mods/594]重要工具 - 眩晕优化 Disable Headbob[/url]
+
+[url=https://tieba.baidu.com/p/9179874810]攻略 - 新手必读指南[/url]
+[url=https://tieba.baidu.com/p/7039774928]攻略 - 藏宝图、古地图+强盗营地分布图[/url]
+[url=https://www.bilibili.com/video/BV1ro4y1U76e]攻略 - 菌砸教你黑吃黑——销赃流[/url]

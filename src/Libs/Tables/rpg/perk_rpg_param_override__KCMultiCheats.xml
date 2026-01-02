@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="perk_rpg_param_override" version="1">
+    <header>
+      <column name="perk_id" type="uuid" />
+      <column name="rpg_param_key" type="character varying" />
+      <column name="rpg_param_value" type="real" />
+    </header>
+    <rows>
+      <!-- RepairKit: HP Limit to 0 and Repair Capacity * 10 -->
+      <row perk_id="01c3b32a-5751-4c98-b6ab-258d02370382" rpg_param_key="RepairKitItemHealthBestLimit" rpg_param_value="" />
+      <row perk_id="01c3b32a-5751-4c98-b6ab-258d02370382" rpg_param_key="RepairKitCapacity" rpg_param_value="2000" />
+      
+      <!-- Stay Clean Longer * 5 -->
+      <row perk_id="01c3b32a-5751-4c98-b6ab-258d02370382" rpg_param_key="FullClothDirtyingOnFullSpeed" rpg_param_value="20000" />
+    </rows>
+  </table>
+</database>

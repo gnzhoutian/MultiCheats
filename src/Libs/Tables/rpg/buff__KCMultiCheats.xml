@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<database name="hammerheart">
+  <table name="buff" version="1">
+    <header>
+      <column name="buff_ai_tag_id" type="integer" />
+      <column name="buff_class_id" type="integer" />
+      <column name="buff_desc" type="character varying" />
+      <column name="buff_exclusivity_id" type="integer" />
+      <column name="buff_id" type="uuid" />
+      <column name="buff_lifetime_id" type="integer" />
+      <column name="buff_name" type="character varying" />
+      <column name="buff_ui_name" type="character varying" />
+      <column name="buff_ui_order" type="integer" />
+      <column name="buff_ui_type_id" type="integer" />
+      <column name="buff_ui_visibility_id" type="integer" />
+      <column name="duration" type="real" />
+      <column name="icon_id" type="integer" />
+      <column name="implementation" type="character varying" />
+      <column name="is_persistent" type="boolean" />
+      <column name="params" type="character varying" />
+      <column name="slot_buff_ui_name" type="character varying" />
+      <column name="slot_icon_id" type="integer" />
+      <column name="visual_effect" type="character varying" />
+    </header>
+    <rows>
+      <!-- Flower Power -> 魅力cha|经验xpm|近战伤害wat|耐力恢复srg|攻击耐力wac|冲刺耐力StaminaSprint -->
+      <row buff_ai_tag_id="" buff_class_id="4" buff_desc="buff_flower_power_desc" buff_exclusivity_id="1" buff_id="942e3fee-6be1-4e29-8da2-f6dba1d5fe6a" buff_lifetime_id="0" buff_name="perk_flower_power" buff_ui_name="buff_flower_power_name" buff_ui_order="" buff_ui_type_id="4" buff_ui_visibility_id="2" duration="-1" icon_id="33" implementation="Cpp:Constant" is_persistent="True" params="cha+2,xpm*64,wat*1.6,srg*6.4,wac*0.01,StaminaSprint*0.01" slot_buff_ui_name="" slot_icon_id="" visual_effect="" />
+    </rows>
+  </table>
+</database>
