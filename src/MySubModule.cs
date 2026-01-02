@@ -13,6 +13,7 @@ using TaleWorlds.MountAndBlade;
 
 using HarmonyLib;
 using Bannerlord.UIExtenderEx;
+using Bannerlord.UIExtenderEx.ResourceManager;
 
 namespace MB2MultiCheats
 {
@@ -26,9 +27,9 @@ namespace MB2MultiCheats
             try
             {
                 // 初始化顺序: UIExtender -> Harmony
-                UIExtender extender = UIExtender.Create(ModuleName);
-                extender.Register(typeof(MySubModule).Assembly);
-                extender.Enable();
+                //UIExtender extender = UIExtender.Create(ModuleName);
+                //extender.Register(typeof(MySubModule).Assembly);
+                //extender.Enable();
 
                 new Harmony(ModuleName).PatchAll();
             }
@@ -57,7 +58,7 @@ namespace MB2MultiCheats
                 if (gameStarterObject is CampaignGameStarter starter)
                 {
                     starter.AddBehavior(new MyBehaviors());
-                    starter.AddBehavior(new MyTalkBehavior());
+                    //starter.AddBehavior(new MyTalkBehavior());
                 }
             }
             catch (Exception ex)

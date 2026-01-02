@@ -46,4 +46,17 @@ namespace MB2MultiCheats.Patches
             designResultRef(__instance).RemoveAt(designResultRef(__instance).Count - 1);
         }
     }
+
+    internal class MyPatches
+    {
+        // 玩家家族学习效率提升倍率
+        [HarmonyPatch(typeof(HeroDeveloper), "GetFocusFactor"), HarmonyPostfix]
+        public static void GetFocusFactorPostfix(HeroDeveloper __instance, ref float __result)
+        {
+            if (__instance.Hero.Clan == Clan.PlayerClan)
+            {
+                __result = __result * (float)MySettings.Instance.ExtraLearningRate;
+            }
+        }
+    }
 }

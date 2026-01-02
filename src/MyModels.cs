@@ -36,16 +36,6 @@ namespace MB2MultiCheats
                 return (int)MySettings.Instance.MaxFocusPerSkill;
             }
         }
-
-        // 玩家家族学习效率提升倍率
-        public override float CalculateLearningRate(Hero hero, SkillObject skill)
-        {
-            if (hero.Clan == Clan.PlayerClan)
-            {
-                return base.CalculateLearningRate(hero, skill) * (float)MySettings.Instance.ExtraLearningRate;
-            }
-            return base.CalculateLearningRate(hero, skill);
-        }
     }
 
     internal class MySmithingModel : DefaultSmithingModel
@@ -160,16 +150,17 @@ namespace MB2MultiCheats
         }
     }
 
-    internal class MyPrisonerRecruitmentCalculationModel: DefaultPrisonerRecruitmentCalculationModel
+    internal class MyPrisonerRecruitmentCalculationModel : DefaultPrisonerRecruitmentCalculationModel
     {
         // 部队俘虏招募增益
-        public override int GetConformityChangePerHour(PartyBase party, CharacterObject troopToBoost)
+        public override ExplainedNumber GetConformityChangePerHour(PartyBase party, CharacterObject troopToBoost)
         {
+            ExplainedNumber stat = base.GetConformityChangePerHour(party, troopToBoost);
             if (party.IsMobile && party.MobileParty.IsMainParty && MySettings.Instance.GainPrisonerRecruitmentRate > 1)
             {
-                return base.GetConformityChangePerHour(party, troopToBoost) * MySettings.Instance.GainPrisonerRecruitmentRate;
+                stat.AddFactor((float)MySettings.Instance.GainPrisonerRecruitmentRate);
             }
-            return base.GetConformityChangePerHour(party, troopToBoost);
+            return stat;
         }
     }
 
@@ -194,13 +185,13 @@ namespace MB2MultiCheats
         }
 
         // 战利品最大价值增益
-        public override float GetExpectedLootedItemValue(CharacterObject character)
+        public override float GetExpectedLootedItemValueFromCasualty(Hero winnerPartyLeaderHero, CharacterObject casualtyCharacter)
         {
-            if (MCRand.RandBool(MySettings.Instance.GainLootedItemRate))
+            if (winnerPartyLeaderHero == Hero.MainHero && MCRand.RandBool(MySettings.Instance.GainLootedItemRate))
             {
-                return base.GetExpectedLootedItemValue(character) * (float)character.Level;
+                return base.GetExpectedLootedItemValueFromCasualty(winnerPartyLeaderHero, casualtyCharacter) * (float)winnerPartyLeaderHero.Level;
             }
-            return base.GetExpectedLootedItemValue(character);
+            return base.GetExpectedLootedItemValueFromCasualty(winnerPartyLeaderHero, casualtyCharacter);
         }
     }
 

@@ -1,4 +1,4 @@
-# MB2MultiCheats
+# 【骑马与砍杀2】 MB2 Multi Cheats
 
 ## 摘要
 
@@ -104,6 +104,6 @@
 - [重要参考 已采纳 OneAttributeAndTwoFocusPerLevel @newpaladinx333](https://www.nexusmods.com/mountandblade2bannerlord/mods/2165)
 - [重要参考 已开源 Kaoses tweaks @Kaoses](https://www.nexusmods.com/mountandblade2bannerlord/mods/2911)
 
-[1]: https://github.com/gnzhoutian/MB2MultiCheats.git  "MB2MultiCheats"
+[1]: https://github.com/gnzhoutian/MultiCheats/tree/MB2MultiCheats  "MB2MultiCheats"
 [2]: https://www.nexusmods.com/mountandblade2bannerlord/mods/7470  "MB2MultiCheats"
 [3]: https://www.nexusmods.com/mountandblade2bannerlord/mods/3164  "My Little Warband"

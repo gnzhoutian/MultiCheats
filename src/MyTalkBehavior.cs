@@ -128,7 +128,7 @@ namespace MB2MultiCheats
         // 获取角色当前位置
         public static Vec2 GetHeroPosition(this Hero hero)
         {
-            return (hero.GetMapPoint()?.Position2D ?? hero.HomeSettlement?.Position2D) ?? Vec2.Zero;
+            return ((hero.CurrentSettlement?.GetPosition2D ?? hero.PartyBelongedTo?.GetPosition2D) ?? hero.HomeSettlement?.GetPosition2D) ?? Vec2.Zero;
         }
 
         // 获取角色距离
