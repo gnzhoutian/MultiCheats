@@ -16,7 +16,7 @@
 [4]: https://www.nexusmods.com/kingdomcomedeliverance2/mods/402
 
 [5]: https://github.com/gnzhoutian/MultiCheats/tree/MB2MultiCheats
-[6]: https://www.nexusmods.com/kingdomcomedeliverance/mods/7470
+[6]: https://www.nexusmods.com/mountandblade2bannerlord/mods/7470
 
 [7]: https://github.com/gnzhoutian/MultiCheats/tree/MCSMultiCheats
 [8]: https://steamcommunity.com/sharedfiles/filedetails/?id=3637384761
