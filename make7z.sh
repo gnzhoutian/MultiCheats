@@ -14,8 +14,8 @@ make_mod(){
     mkdir -p tmpbuild/pak
 
     pushd tmpbuild/pak
-        cp -af ${TOP_PATH}/src/Libs .
-        ${TOP_PATH}/tools/7za.exe a -r -tzip -mtm=off ../${mod_name}.pak Libs
+        cp -af ${TOP_PATH}/src/Libs ${TOP_PATH}/src/Quests .
+        ${TOP_PATH}/tools/7za.exe a -r -tzip -mtm=off ../${mod_name}.pak Libs Quests
     popd
 
     pushd tmpbuild
@@ -37,10 +37,10 @@ make_mod(){
 }
 
 mod_test(){
-    dst_path="/d/Games/steam/steamapps/common/KingdomComeDeliveranceII/Mods/KC2MultiCheats/Data/KC2MultiCheats.pak"
+    dst_path="/d/Games/steam/steamapps/common/KingdomComeDeliverance2/Mods/KC2MultiCheats/Data/KC2MultiCheats.pak"
     pushd ${TOP_PATH}/src
         if [ -f ${dst_path} ]; then
-            ${TOP_PATH}/tools/7za.exe a -r -tzip -mtm=off ${dst_path} Libs
+            ${TOP_PATH}/tools/7za.exe a -r -tzip -mtm=off ${dst_path} Libs Quests
         fi
     popd
 }

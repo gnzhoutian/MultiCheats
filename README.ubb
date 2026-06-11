@@ -39,7 +39,8 @@ Format description: Basic capacity is increased by 8 times (70 -> 560), which me
     2. Horse adjustment: dash buffer lengthened (21->100, 7->20), overweight limit allowed (1 -> 100)
     3. Blacksmith maintenance: repair tool capacity increased by 5 times (600 -> 3000), hammer maximum effect increased by 5 times (0.02 -> 0.1)
     4. Item adjustment: Gold accessories attribute adjustment, conspicuous/visibility (0 -> -10), noise (0 -> -20)
-    5. Bow adjustment: open the crosshair
+    5. Sales Treasure Chest: Daily maximum sales limit increased by 8 times (2 -> 16) **Full version modification, subject to version update**
+    6. Bow adjustment: open the crosshair
     
 [i][b][color=#ff7700][size=3]原始中文说明[/size][/color][/b]
 格式说明：基础容量扩展8倍（70 -> 560），表示原版数值为70，MOD调整为560
@@ -58,7 +59,8 @@ Format description: Basic capacity is increased by 8 times (70 -> 560), which me
     2. 马匹调整：冲刺缓冲区加长（21->100, 7->20），允许超重上限（1 -> 100）
     3. 打铁维护：修复工具容量扩展5倍（600 -> 3000），锤击最大效果扩展5倍（0.02 -> 0.1）
     4. 物品调整：金制饰品属性调整，显眼/可见（0 -> -10），噪音（0 -> -20）
-    5. 弓箭调整：开启准星
+    5. 销售宝箱: 每日最大销售限额扩展8倍（2 -> 16）**全量修改模式，受版本更新影响**
+    6. 弓箭调整：开启准星
 [/i]
 
 [color=#ff7700][size=4]Appendix 1. How to make a MOD[/size][/color]
@@ -85,3 +87,4 @@ Format description: Basic capacity is increased by 8 times (70 -> 560), which me
 [url=https://wiki.fireundubh.com/kingdomcome/rpg-parameters]重要参考 - 【天国：拯救】原版参数查询 rpg-parameters[/url]
 [url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/324]重要参考 - Slower Leveling[/url]
 [url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/87]重要参考 - 【天国：拯救2】物品ID本地化[/url]
+[url=https://www.nexusmods.com/kingdomcomedeliverance2/mods/2449]重要参考 - 【天国：拯救2】即时销售宝箱[/url]
