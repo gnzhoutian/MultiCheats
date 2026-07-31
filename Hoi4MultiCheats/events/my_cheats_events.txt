@@ -1,0 +1,45 @@
+add_namespace = my_cheat_events
+
+country_event = {
+    id = my_cheat_events.1                                      # 事件ID
+    hidden = yes                                                # 隐藏事件
+    is_triggered_only = yes                                     # 触发机制
+
+    immediate = {
+        add_political_power = 800                               # 增加政治点数
+        set_research_slots = 8                                  # 设置科研槽数
+        add_equipment_to_stockpile = {                          # 增加运输船数
+            type = convoy_1 amount = 800 producer = ROOT
+        }
+        
+        set_technology = {                                      # 激活科技
+            main_battle_tank_chassis = 1                        # 现代坦克
+            sp_rockets_dual_chamber_rocket_engine_2 = 1         # 火箭引擎III
+            popup = no                                          # 弹出窗口
+        }
+
+        # 玩家首都修改
+        capital_scope = {
+            add_manpower = 8000000                              # 增加省份人口
+            set_state_category = megalopolis                    # 设置省份规模
+            add_extra_state_shared_building_slots = 25          # 增加建筑槽位
+
+            # 增加省份资源
+            add_resource = { type = oil       amount = 80 }     # 油
+            add_resource = { type = aluminium amount = 80 }     # 铝
+            add_resource = { type = rubber    amount = 80 }     # 橡胶
+            add_resource = { type = tungsten  amount = 80 }     # 钨
+            add_resource = { type = steel     amount = 80 }     # 钢
+            add_resource = { type = chromium  amount = 80 }     # 铬
+            add_resource = { type = coal      amount = 80 }     # 煤
+            
+            # 设置省份建筑
+            set_building_level = { type = infrastructure     level = 5  instant_build = yes }   # 基础设施
+            set_building_level = { type = air_base           level = 10 instant_build = yes }   # 空军基地
+            set_building_level = { type = anti_air_building  level = 5  instant_build = yes }   # 防空炮
+            set_building_level = { type = radar_station      level = 6  instant_build = yes }   # 雷达
+            set_building_level = { type = arms_factory       level = 15 instant_build = yes }   # 军用工厂
+            set_building_level = { type = industrial_complex level = 10 instant_build = yes }   # 民用工厂
+        }
+    }
+}

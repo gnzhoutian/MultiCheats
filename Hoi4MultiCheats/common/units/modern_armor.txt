@@ -1,0 +1,58 @@
+sub_units = {
+
+    modern_armor = {
+        abbreviation = "OTK"
+        sprite = "medium_armor"
+        map_icon_category = armored
+        priority = 2510
+        ai_priority = 3510
+        active = yes
+        
+        type = {
+            armor
+        }
+        
+        group = armor
+        
+        categories = {
+            category_tanks
+            category_front_line
+            category_all_armor
+            category_army
+        }
+        
+        # 营级属性, 部分属性会乘N（满编营数量N=8）
+        # Basic Abilities
+        need = { modern_tank_chassis = 50 }     # 装备需求 xN
+        combat_width = 2                        # 战斗宽度 xN
+        supply_consumption = 0.2                # 补给消耗 xN
+        weight = 2                              # 运输重量 xN
+        can_be_parachuted = yes                 # 可否空投
+
+        # Important Ability
+        manpower = 1000                         # 人力需求 xN
+        max_strength = 80                       # 最大HP xN
+        max_organisation = 800                  # 最大组织度
+        default_morale = 80                     # 组织度恢复速度
+        training_time = 8                       # 训练天数
+
+        # Misc Abilities
+        casualty_trickleback = 0.2              # 伤兵复原 xN
+        initiative = 0.2                        # 主动性 xN
+        reliability_factor = 0.2                # 可靠性 xn
+        experience_loss_factor = -0.2           # 经验损失 xN
+
+        # 地形影响（移动、攻击、防御）
+        forest = { movement = 1 attack = 1 defence = 1 }
+        hills = { movement = 1 attack = 1 defence = 1 }
+        mountain = { movement = 1 attack = 1 defence = 1 }
+        jungle = { movement = 1 attack = 1 defence = 1 }
+        marsh = { movement = 1 attack = 1 defence = 1 }
+        plains = { movement = 1 attack = 1 defence = 1 }
+        desert = { movement = 1 attack = 1 defence = 1 }
+        urban = { movement = 1 attack = 1 defence = 1 }
+        fort = { movement = 1 attack = 1 defence = 1 }
+        river = { movement = 1 attack = 1 defence = 1 }
+        amphibious = { movement = 1 attack = 1 defence = 1 }
+    }
+}

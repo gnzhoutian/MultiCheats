@@ -1,0 +1,13 @@
+on_actions = {
+    # 开局触发事件
+    on_startup = {
+        effect = {
+            every_country = {
+                limit = {
+                    is_ai = no
+                }
+                country_event = my_cheat_events.1
+            }
+        }
+    }
+}
