@@ -12,11 +12,25 @@ country_event = {
             type = convoy_1 amount = 800 producer = ROOT
         }
         
+        add_breakthrough_progress = {                           # 添加科研突破（陆海空核）
+            specialization = all  value = 32
+        }
+
         set_technology = {                                      # 激活科技
             main_battle_tank_chassis = 1                        # 现代坦克
             sp_rockets_dual_chamber_rocket_engine_2 = 1         # 火箭引擎III
-            popup = no                                          # 弹出窗口
+            popup = no                                          # 关闭弹窗
         }
+
+        # add_tech_bonus = {                                      # 减少超前惩罚
+        #     name = industrial_bonus                             # 工业加成 (任意命名)
+        #     ahead_reduction = 8                                 # 免惩年限
+        #     uses = 80                                           # 可用次数
+        #     category = armor                                    # 装甲
+        #     category = artillery                                # 火炮
+        #     category = naval_equipment                          # 海军
+        #     category = air_equipment                            # 空军
+        # }
 
         # 玩家首都修改
         capital_scope = {
@@ -32,7 +46,7 @@ country_event = {
             add_resource = { type = steel     amount = 80 }     # 钢
             add_resource = { type = chromium  amount = 80 }     # 铬
             add_resource = { type = coal      amount = 80 }     # 煤
-            
+
             # 设置省份建筑
             set_building_level = { type = infrastructure     level = 5  instant_build = yes }   # 基础设施
             set_building_level = { type = air_base           level = 10 instant_build = yes }   # 空军基地
