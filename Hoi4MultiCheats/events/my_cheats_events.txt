@@ -22,16 +22,6 @@ country_event = {
             popup = no                                          # 关闭弹窗
         }
 
-        # add_tech_bonus = {                                      # 减少超前惩罚
-        #     name = industrial_bonus                             # 工业加成 (任意命名)
-        #     ahead_reduction = 8                                 # 免惩年限
-        #     uses = 80                                           # 可用次数
-        #     category = armor                                    # 装甲
-        #     category = artillery                                # 火炮
-        #     category = naval_equipment                          # 海军
-        #     category = air_equipment                            # 空军
-        # }
-
         # 玩家首都修改
         capital_scope = {
             add_manpower = 8000000                              # 增加省份人口
