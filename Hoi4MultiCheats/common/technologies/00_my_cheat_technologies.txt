@@ -71,8 +71,8 @@ technologies = {
         # 国家
         political_power_factor = 4                      # 政治点数 +400%
         justify_war_goal_time = -4                      # 宣战时间 -400%
-        research_speed_factor = 32                      # 研究效率 +3200%
         special_project_speed_factor = 8                # 专项效率 +800%
+        research_speed_factor = 80                      # 研究效率 +8000%
 
         # 工业
         local_resources_factor = 4                      # 战略资源 +400%
@@ -118,5 +118,8 @@ technologies = {
         air_mission_efficiency = 0.88                   # 任务效率 +88%
         air_ace_generation_chance_factor = 0.88         # 王牌几率 +88%
         air_accidents_factor = -0.88                    # 空难几率 -88%
+
+        # 特殊
+        agency_upgrade_time = -0.88                     # 情报机构升级时间 -88%
     }
 }

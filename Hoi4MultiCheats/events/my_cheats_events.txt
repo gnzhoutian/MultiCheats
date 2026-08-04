@@ -13,7 +13,7 @@ country_event = {
         }
         
         add_breakthrough_progress = {                           # 添加科研突破（陆海空核）
-            specialization = all  value = 32
+            specialization = all value = 32
         }
 
         set_technology = {                                      # 激活科技

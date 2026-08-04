@@ -39,7 +39,7 @@ sub_units = {
         # Misc Abilities
         casualty_trickleback = 0.2              # 伤兵复原 xN
         initiative = 0.2                        # 主动性 xN
-        reliability_factor = 0.2                # 可靠性 xn
+        reliability_factor = 0.2                # 可靠性加成 xn
         experience_loss_factor = -0.2           # 经验损失 xN
 
         # 地形影响（移动、攻击、防御）
