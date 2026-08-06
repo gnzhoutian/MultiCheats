@@ -71,8 +71,8 @@ technologies = {
         # 国家
         political_power_factor = 4                      # 政治点数 +400%
         justify_war_goal_time = -4                      # 宣战时间 -400%
-        special_project_speed_factor = 8                # 专项效率 +800%
-        research_speed_factor = 80                      # 研究效率 +8000%
+        special_project_speed_factor = 32               # 专项效率 +3200%
+        research_speed_factor = 32                      # 研究效率 +3200%
 
         # 工业
         local_resources_factor = 4                      # 战略资源 +400%
@@ -93,14 +93,8 @@ technologies = {
         experience_gain_navy_unit_factor = 4            # 海军单位经验 +400%
         air_mission_xp_gain_factor = 4                  # 空军单位经验 +400%
 
-        # 局势
-        generate_wargoal_tension = -0.88                # 宣战借口 -88%
-        join_faction_tension = -0.88                    # 加入阵营 -88%
-        send_volunteers_tension = -0.88                 # 派志愿军 -88%
-        lend_lease_tension = -0.88                      # 租借法案 -88%
-
         # 陆军
-        attrition = -0.88                               # 基础损耗 -88%
+        army_fuel_consumption_factor = -0.88            # 燃料消耗 -88%
         supply_consumption_factor = -0.88               # 补给消耗 -88%
         out_of_supply_factor = -0.88                    # 补给惩罚 -88%
         org_loss_when_moving = -0.88                    # 移动组织度损耗 -88%
@@ -116,7 +110,6 @@ technologies = {
         # 空军
         air_detection = 0.88                            # 侦测能力 +88%
         air_mission_efficiency = 0.88                   # 任务效率 +88%
-        air_ace_generation_chance_factor = 0.88         # 王牌几率 +88%
         air_accidents_factor = -0.88                    # 空难几率 -88%
 
         # 特殊

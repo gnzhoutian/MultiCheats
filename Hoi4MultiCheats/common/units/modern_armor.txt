@@ -32,15 +32,14 @@ sub_units = {
         # Important Ability
         manpower = 1000                         # 人力需求 xN
         max_strength = 80                       # 最大HP xN
-        max_organisation = 800                  # 最大组织度
-        default_morale = 80                     # 组织度恢复速度
+        max_organisation = 80                   # 最大组织度
+        default_morale = 8                      # 组织度恢复速度
         training_time = 8                       # 训练天数
 
         # Misc Abilities
-        casualty_trickleback = 0.2              # 伤兵复原 xN
-        initiative = 0.2                        # 主动性 xN
-        reliability_factor = 0.2                # 可靠性加成 xn
-        experience_loss_factor = -0.2           # 经验损失 xN
+        casualty_trickleback = 0.1              # 伤兵复原 xN
+        initiative = 0.1                        # 主动性 xN
+        experience_loss_factor = -0.1           # 经验损失 xN
 
         # 地形影响（移动、攻击、防御）
         forest = { movement = 1 attack = 1 defence = 1 }

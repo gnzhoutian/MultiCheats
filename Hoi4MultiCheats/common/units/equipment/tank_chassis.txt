@@ -906,18 +906,18 @@ equipments = {
         # Important Ability
         fuel_capacity = 800                 # 燃油容量 xN
         fuel_consumption = 2                # 燃油消耗 xN
-        suppression = 80                    # 镇压能力 xN
-        entrenchment = 80                   # 堑壕能力 xN
-        recon = 80                          # 侦查能力 xN
+        suppression = 8                     # 镇压能力 xN
+        entrenchment = 8                    # 堑壕能力 xN
+        recon = 8                           # 侦查能力 xN
         
         # Misc Abilities
         manpower = 2                        # 人力需求 xN
         lend_lease_cost = 80                # 租借运输 xN
-        build_cost_ic = 2                   # 建造花费 xN
+        build_cost_ic = 4                   # 建造花费 xN
         resources = {                       # 生产资源 xN
-            oil = 1
-            steel = 1
-            chromium = 1
+            oil = 4
+            steel = 4
+            chromium = 4
         }
 	}
 

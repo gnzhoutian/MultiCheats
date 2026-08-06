@@ -8,10 +8,7 @@ country_event = {
     immediate = {
         add_political_power = 800                               # 增加政治点数
         set_research_slots = 8                                  # 设置科研槽数
-        add_equipment_to_stockpile = {                          # 增加运输船数
-            type = convoy_1 amount = 800 producer = ROOT
-        }
-        
+
         add_breakthrough_progress = {                           # 添加科研突破（陆海空核）
             specialization = all value = 32
         }
