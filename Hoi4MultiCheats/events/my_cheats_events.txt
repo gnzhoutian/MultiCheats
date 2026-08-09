@@ -37,8 +37,6 @@ country_event = {
             # 设置省份建筑
             set_building_level = { type = infrastructure     level = 5  instant_build = yes }   # 基础设施
             set_building_level = { type = air_base           level = 10 instant_build = yes }   # 空军基地
-            set_building_level = { type = anti_air_building  level = 5  instant_build = yes }   # 防空炮
-            set_building_level = { type = radar_station      level = 6  instant_build = yes }   # 雷达
             set_building_level = { type = arms_factory       level = 15 instant_build = yes }   # 军用工厂
             set_building_level = { type = industrial_complex level = 10 instant_build = yes }   # 民用工厂
         }

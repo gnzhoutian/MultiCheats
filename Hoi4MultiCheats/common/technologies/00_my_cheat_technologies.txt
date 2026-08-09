@@ -71,7 +71,7 @@ technologies = {
         # 国家
         political_power_factor = 4                      # 政治点数 +400%
         justify_war_goal_time = -4                      # 宣战时间 -400%
-        special_project_speed_factor = 32               # 专项效率 +3200%
+        special_project_speed_factor = 16               # 专项效率 +1600%
         research_speed_factor = 32                      # 研究效率 +3200%
 
         # 工业
@@ -82,6 +82,7 @@ technologies = {
         production_factory_max_efficiency_factor = 4    # 最大产能 +400%
         production_factory_efficiency_gain_factor = 4   # 产能效率 +400%
         line_change_production_efficiency_factor = 4    # 效率保持 +400%
+        military_industrial_organization_funds_gain = 4 # 经费获取 +400%
 
         # 经验
         experience_gain_factor = 4                      # 将领经验 +400%
