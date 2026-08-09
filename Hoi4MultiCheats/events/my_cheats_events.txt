@@ -10,7 +10,7 @@ country_event = {
         set_research_slots = 8                                  # 设置科研槽数
 
         add_breakthrough_progress = {                           # 添加科研突破（陆海空核）
-            specialization = all value = 32
+            specialization = all value = 16
         }
 
         set_technology = {                                      # 激活科技
