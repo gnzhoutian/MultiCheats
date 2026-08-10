@@ -14,7 +14,6 @@ country_event = {
         }
 
         set_technology = {                                      # 激活科技
-            main_battle_tank_chassis = 1                        # 现代坦克
             sp_rockets_dual_chamber_rocket_engine_2 = 1         # 火箭引擎III
             popup = no                                          # 关闭弹窗
         }

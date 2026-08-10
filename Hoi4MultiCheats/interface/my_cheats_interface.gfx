@@ -1,0 +1,11 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_EMI_tank_rocket_engine"
+        textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_gas_turbine_engine.dds"
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = "GFX_tank_module_rocket_engine"
+        textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_gas_turbine_engine.dds"
+    }
+}

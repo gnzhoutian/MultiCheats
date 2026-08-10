@@ -1,36 +1,6 @@
 technologies = {
 
-    @1945 = 12
     @rockets_1946 = 10
-    
-    main_battle_tank_chassis = { #E-50
-        enable_equipments = {
-            modern_tank_chassis_1
-            modern_tank_destroyer_chassis_1
-            modern_tank_artillery_chassis_1
-            modern_tank_aa_chassis_1
-        }
-        enable_subunits = {
-            modern_armor
-        }
-
-        research_cost = 24                              # 研究基础天数 24*100
-        start_year = 2012                               # 科技超前年数,有很高的研究惩罚
-        ai_will_do = { factor = 0 }                     # 电脑研究几率
-
-        folder = {
-            name = nsb_armour_folder
-            position = { x = 2 y = @1945 }
-        }
-
-        categories = {
-            armor
-            mio_cat_tech_all_armor_and_modules
-            cat_medium_armor
-            mio_cat_tech_medium_armor_and_modules
-        }
-        special_project_specialization = { specialization_land }
-    }
 
     sp_rockets_dual_chamber_rocket_engine_2 = {
         allow = {
@@ -52,12 +22,13 @@ technologies = {
 
         enable_equipment_modules = {
             rocket_engine_3
+            tank_rocket_engine
         }
-        
+
         research_cost = 24                              # 研究基础天数 24*100
         start_year = 2012                               # 科技超前年数,有很高的研究惩罚
         ai_will_do = { factor = 0 }                     # 电脑研究几率
-        
+
         folder = {
             name = electronics_folder
             position = { x = -2 y = @rockets_1946 }
@@ -66,11 +37,11 @@ technologies = {
         categories = {
             rocketry
         }
-        
+
         ## 开局变量修正，或可放在 static_modifiers.txt ##
         # 国家
-        political_power_factor = 4                      # 政治点数 +400%
-        justify_war_goal_time = -4                      # 宣战时间 -400%
+        justify_war_goal_time = -0.88                   # 宣战时间 -88%
+        agency_upgrade_time = -0.88                     # 谍报升级 -88%
         special_project_speed_factor = 16               # 专项效率 +1600%
         research_speed_factor = 32                      # 研究效率 +3200%
 
@@ -80,40 +51,35 @@ technologies = {
         industrial_capacity_dockyard = 4                # 船坞产出 +400%
         industrial_capacity_factory = 4                 # 工厂产出 +400%
         production_factory_max_efficiency_factor = 4    # 最大产能 +400%
-        production_factory_efficiency_gain_factor = 4   # 产能效率 +400%
+        production_factory_efficiency_gain_factor = 4   # 效率增长 +400%
         line_change_production_efficiency_factor = 4    # 效率保持 +400%
-        military_industrial_organization_funds_gain = 4 # 经费获取 +400%
+        military_industrial_organization_funds_gain = 4 # 军工经费 +400%
 
         # 经验
-        experience_gain_factor = 4                      # 将领经验 +400%
+        political_power_factor = 4                      # 政治点数 +400%
         command_power_gain_mult = 4                     # 指挥点数 +400%
-        experience_gain_army_factor = 4                 # 陆军经验 +400%
-        experience_gain_navy_factor = 4                 # 海军经验 +400%
-        experience_gain_air_factor = 4                  # 空军经验 +400%
-        experience_gain_army_unit_factor = 4            # 陆军单位经验 +400%
-        experience_gain_navy_unit_factor = 4            # 海军单位经验 +400%
-        air_mission_xp_gain_factor = 4                  # 空军单位经验 +400%
+        experience_gain_army_factor = 4                 # 陆军点数 +400%
+        experience_gain_navy_factor = 4                 # 海军点数 +400%
+        experience_gain_air_factor = 4                  # 空军点数 +400%
+        experience_gain_factor = 4                      # 将领经验 +400%
+        experience_gain_army_unit_factor = 4            # 陆军经验 +400%
+        experience_gain_navy_unit_factor = 4            # 海军经验 +400%
+        air_mission_xp_gain_factor = 4                  # 空军经验 +400%
 
         # 陆军
-        army_fuel_consumption_factor = -0.88            # 燃料消耗 -88%
+        army_fuel_consumption_factor = -0.88            # 燃料消耗 -88%
         supply_consumption_factor = -0.88               # 补给消耗 -88%
-        out_of_supply_factor = -0.88                    # 补给惩罚 -88%
-        org_loss_when_moving = -0.88                    # 移动组织度损耗 -88%
+        out_of_supply_factor = -0.88                    # 断补惩罚 -88%
+        org_loss_when_moving = -0.88                    # 行军损耗 -88%
 
         # 海军
-        naval_hit_chance = 0.88                         # 命中几率 +88%
         naval_detection = 0.88                          # 侦测能力 +88%
         sortie_efficiency = 0.88                        # 舰载出击 +88%
         critical_receive_chance = -0.88                 # 致命几率 -88%
-        naval_speed_factor = 4                          # 最大航速 +400%
-        navy_max_range_factor = 4                       # 最大航程 +400%
 
         # 空军
         air_detection = 0.88                            # 侦测能力 +88%
         air_mission_efficiency = 0.88                   # 任务效率 +88%
         air_accidents_factor = -0.88                    # 空难几率 -88%
-
-        # 特殊
-        agency_upgrade_time = -0.88                     # 情报机构升级时间 -88%
     }
 }
