@@ -75,11 +75,13 @@ technologies = {
         # 海军
         naval_detection = 0.88                          # 侦测能力 +88%
         sortie_efficiency = 0.88                        # 舰载出击 +88%
+        navy_max_range_factor = 0.88                    # 海军航程 +88%
         critical_receive_chance = -0.88                 # 致命几率 -88%
 
         # 空军
         air_detection = 0.88                            # 侦测能力 +88%
         air_mission_efficiency = 0.88                   # 任务效率 +88%
+        air_range_factor = 0.88                         # 空军航程 +88%
         air_accidents_factor = -0.88                    # 空难几率 -88%
     }
 }

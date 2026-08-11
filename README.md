@@ -10,25 +10,33 @@
 ```shell
 .
 ├── Hoi4MultiCheats
-│   ├── common
-│   │   ├── on_actions
-│   │   │   └── my_cheat_actions.txt                # 开局事件触发
-│   │   ├── technologies
-│   │   │   └── 00_my_cheat_technologies.txt        # 科技修改，含研究时间年限调整、全局增益调整
-│   │   └── units
-│   │       ├── equipment
-│   │       │   ├── modules
-│   │       │   │   └── zz_my_cheat_modules.txt     # 飞机修改，含火箭引擎III调整
-│   │       │   └── tank_chassis.txt                # 坦克修改，含现代坦克底盘调整
-│   │       └── modern_armor.txt                    # 坦克修改，含现代坦克兵种调整
-│   ├── events
-│   │   └── my_cheats_events.txt                    # 开局事件，含省份修改、国家修改
-│   ├── _docs
-│   │   ├── HOI4.md                                 # 游玩技巧说明
-│   │   └── 52PCGAME.md                             # 52论坛帖子源码
-│   └── descriptor.mod                              # MOD初始化后自带
-│── Hoi4MultiCheats.mod                             # MOD初始化后自带，含MOD路径
-└── README.md                                       # 仓库说明文件
+│   ├── events
+│   │   └── my_cheat_events.txt                             # 开局事件，含省份修改、国家修改
+│   ├── common
+│   │   ├── on_actions
+│   │   │   └── my_cheat_actions.txt                        # 开局事件触发
+│   │   ├── technologies
+│   │   │   └── 00_my_cheat_technologies.txt                # 科技修改，含研究时间年限调整、装备激活、全局增益调整
+│   │   └── units
+│   │       ├── names_divisions
+│   │       │   └── my_cheat_names_divisions.txt            # 部队命名
+│   │       │
+│   │       └── equipment
+│   │           └── modules
+│   │               └── zz_my_cheat_modules.txt             # 装备修改，含火箭引擎III调整、【新增坦克引擎】
+│   ├── interface
+│   │   └── my_cheat_interface.gfx                          # 【新增坦克引擎】 图标声明
+│   ├── localisation
+│   │   ├── english
+│   │   │   └── my_cheat_localisation_l_english.yml         # 【新增坦克引擎】 英文描述
+│   │   └── simp_chinese
+│   │       └── my_cheat_localisation_l_simp_chinese.yml    # 【新增坦克引擎】 中文汉化
+│   ├── _docs
+│   │   ├── HOI4.md                                         # 游玩技巧说明
+│   │   └── 52PCGAME.md                                     # 52论坛帖子源码
+│   └── descriptor.mod
+├── Hoi4MultiCheats.mod                                     # MOD初始化后自带，含MOD路径
+└── README.md                                               # 仓库说明
 ```
 
 

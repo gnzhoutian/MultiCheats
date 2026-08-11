@@ -1,42 +1,66 @@
 MY_ARMY_01 = {
-    name = "武装党卫队"                     # 显示名称
-    can_use = { ROOT = { is_ai = no } }     # 只限玩家
-    division_types = { "modern_armor" }     # 兵种类别
-    fallback_name = "党卫军第%d装甲师"      # 通用命名格式 (ordered之后)
+    name = "中央近卫军"                             # 显示名称
+    can_use = { ROOT = { is_ai = no } }             # 只限玩家
+    division_types = { "modern_armor" }             # 兵种类别
+    fallback_name = "近卫第%d装甲师"                # 通用命名格式 (ordered之后)
     ordered = {
-        1 = { "%d.SS“元首警卫旗队”装甲师" }
-        2 = { "%d.SS“帝国”装甲师" }
-        3 = { "%d.SS“骷髅”装甲师" }
-        5 = { "%d.SS“维京”装甲师" }
-        9 = { "%d.SS“霍亨斯陶芬”装甲师" }
-        10 = { "%d.SS“弗伦斯贝格”装甲师" }
-        11 = { "%d.SS“诺德兰北欧”装甲师" }
-        12 = { "%d.SS“铁血青年团”装甲师" }
+        1 = { "近卫“天下第一”装甲师" }              # 全军领衔
+
+        2 = { "近卫第%d“万岁”装甲师" }              # 近代38军（万岁军）
+        3 = { "近卫第%d“常胜”装甲师" }              # 近代39军（常胜雄师）
+        4 = { "近卫第%d“旋风”装甲师" }              # 近代40军（旋风部队）
+        5 = { "近卫第%d“铁军”装甲师" }              # 近代54军（叶挺独立团）
+
+        6 = { "近卫第%d“虎贲”装甲师" }              # 古代周军（牧野大破商军）
+        7 = { "近卫第%d“玄甲”装甲师" }              # 古代唐军（李世民重骑兵）
+        8 = { "近卫第%d“背嵬”装甲师" }              # 古代宋军（岳家军终极王牌）
+        9 = { "近卫第%d“神机”装甲师" }              # 古代明军（全火器特种部队）
     }
 }
 
 MY_ARMY_02 = {
+    name = "武装党卫队"
+    can_use = { ROOT = { is_ai = no } }
+    division_types = { "modern_armor" }
+    fallback_name = "党卫军第%d装甲师"
+    ordered = {
+        1 = { "%d.SS“元首警卫旗队”装甲师" }
+        2 = { "%d.SS“帝国”装甲师" }
+        3 = { "%d.SS“骷髅”装甲师" }
+        # 4 = { "%d.SS“警察”装甲掷弹兵师" }         # 装甲掷弹兵师
+        5 = { "%d.SS“维京”装甲师" }
+        # 6 = { "%d.SS“北方”装甲掷弹兵师" }         # 山地师
+        # 7 = { "%d.SS“欧根亲王”装甲掷弹兵师" }     # 志愿山地师
+        # 8 = { "%d.SS“弗洛里安盖尔”装甲掷弹兵师" } # 骑兵师
+        9 = { "%d.SS“霍亨斯陶芬”装甲师" }
+        10 = { "%d.SS“弗伦斯贝格”装甲师" }
+        11 = { "%d.SS“诺德兰北欧”装甲师" }          # 志愿装甲掷弹兵师
+        12 = { "%d.SS“铁血青年团”装甲师" }
+    }
+}
+
+MY_ARMY_03 = {
     name = "国防装甲师"
     can_use = { ROOT = { is_ai = no } }
     division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
     fallback_name = "国防军第%d装甲师"
 }
 
-MY_ARMY_03 = {
+MY_ARMY_04 = {
     name = "国防步兵师"
     can_use = { ROOT = { is_ai = no } }
     division_types = { "infantry" }
     fallback_name = "国防军第%d步兵师"
 }
 
-MY_ARMY_04 = {
+MY_ARMY_05 = {
     name = "国防动员师"
     can_use = { ROOT = { is_ai = no } }
     division_types = { "infantry" }
     fallback_name = "国防动员第%d师"
 }
 
-MY_ARMY_05 = {
+MY_ARMY_06 = {
     name = "宪兵警备队"
     can_use = { ROOT = { is_ai = no } }
     division_types = { "cavalry" }
