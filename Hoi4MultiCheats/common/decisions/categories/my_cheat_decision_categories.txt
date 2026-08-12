@@ -1,0 +1,4 @@
+my_cheat_decision_categories = {
+    priority = 1000
+    allowed = { is_ai = no }
+}

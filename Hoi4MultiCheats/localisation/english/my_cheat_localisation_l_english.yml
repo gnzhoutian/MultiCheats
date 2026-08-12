@@ -1,3 +1,11 @@
 ﻿l_english:
  tank_rocket_engine: "Rocket Engine"
  tank_rocket_engine_desc: "A tank engine developed from rocket engines. High fuel consumption, but the highest speed of any engine at a given Engine Size."
+
+ my_cheat_decision_categories: "Central Development and Reform Commission"
+ my_cheat_decision_001: "National Infrastructure Construction"
+ my_cheat_decision_001_effect: "Construct max-level Infrastructure in all controlled states."
+ my_cheat_decision_002: "National Supply Hub Deployment"
+ my_cheat_decision_002_effect: "Construct a Supply Hub on every controlled Victory Point."
+ my_cheat_decision_003: "National High-Speed Railway Network"
+ my_cheat_decision_003_effect: "Construct level 5 Railways connecting all domestic Supply Hubs."

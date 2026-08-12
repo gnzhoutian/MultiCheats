@@ -1,0 +1,76 @@
+my_cheat_decision_categories = {
+    my_cheat_decision_001 = {
+        cost = 100
+        days_remove = 10
+
+        remove_effect = {
+            custom_effect_tooltip = my_cheat_decision_001_effect
+            hidden_effect = {
+                every_state = {
+                    limit = { is_fully_controlled_by = ROOT }
+                    add_building_construction  = {
+                        type = infrastructure
+                        level = 5
+                        instant_build = no
+                        province = {
+                            all_provinces = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    my_cheat_decision_002 = {
+        cost = 100
+        days_remove = 15
+
+        remove_effect = {
+            custom_effect_tooltip = my_cheat_decision_002_effect
+            hidden_effect = {
+                every_state = {
+                    limit = { is_fully_controlled_by = ROOT }
+                    add_building_construction  = {
+                        type = supply_node
+                        level = 1
+                        instant_build = no
+                        province = {
+                            all_provinces = yes
+                            limit_to_victory_point = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    my_cheat_decision_003 = {
+        cost = 100
+        days_remove = 20
+
+        remove_effect = {
+            custom_effect_tooltip = my_cheat_decision_003_effect
+            hidden_effect = {
+                every_state = {
+                    limit = { is_fully_controlled_by = ROOT }
+                    every_neighbor_state = {
+                        limit = {
+                            can_build_railway = {
+                                start_state = PREV
+                                target_state = THIS
+                                build_only_on_allied = no
+                            }
+                        }
+                        build_railway = {
+                            start_state = PREV
+                            target_state = THIS
+                            fallback = yes
+                            level = 5
+                            build_only_on_allied = no
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

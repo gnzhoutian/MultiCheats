@@ -1,3 +1,11 @@
 ﻿l_simp_chinese:
  tank_rocket_engine: "火箭动力发动机"
  tank_rocket_engine_desc: "由火箭引擎技术衍生而来的坦克发动机。高燃料消耗，但在相同的发动机尺寸下，能提供最高的速度。"
+
+ my_cheat_decision_categories: "中央发展改革委员会"
+ my_cheat_decision_001: "全国基础设施建设"
+ my_cheat_decision_001_effect: "在国内所有省份建造满级基础设施"
+ my_cheat_decision_002: "全国补给中心建设"
+ my_cheat_decision_002_effect: "在国内所有胜利点建造补给中心"
+ my_cheat_decision_003: "全国高速铁路建设"
+ my_cheat_decision_003_effect: "在国内所有补给中心之间铺设满级铁路"

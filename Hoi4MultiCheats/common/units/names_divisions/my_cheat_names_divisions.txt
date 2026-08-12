@@ -54,13 +54,20 @@ MY_ARMY_04 = {
 }
 
 MY_ARMY_05 = {
+    name = "国防特种师"
+    can_use = { ROOT = { is_ai = no } }
+    division_types = { "infantry" }
+    fallback_name = "国防特种第%d师"
+}
+
+MY_ARMY_06 = {
     name = "国防动员师"
     can_use = { ROOT = { is_ai = no } }
     division_types = { "infantry" }
     fallback_name = "国防动员第%d师"
 }
 
-MY_ARMY_06 = {
+MY_ARMY_07 = {
     name = "宪兵警备队"
     can_use = { ROOT = { is_ai = no } }
     division_types = { "cavalry" }
