@@ -42,8 +42,8 @@ technologies = {
         # 国家
         justify_war_goal_time = -0.88                   # 宣战时间 -88%
         agency_upgrade_time = -0.88                     # 谍报升级 -88%
-        special_project_speed_factor = 16               # 专项效率 +1600%
-        research_speed_factor = 32                      # 研究效率 +3200%
+        special_project_speed_factor = 24               # 专项效率 +2400%
+        research_speed_factor = 48                      # 研究效率 +4800%
 
         # 工业
         local_resources_factor = 4                      # 战略资源 +400%
