@@ -5,6 +5,20 @@ equipment_modules = {
         category = plane_rocket_engine_type
         sfx = sfx_ui_sd_module_engine
 
+        allow_mission_type = {
+            air_superiority                 # 夺取制空
+            interception                    # 拦截
+            cas                             # 密接支援
+            strategic_bomber                # 战略轰炸
+            naval_bomber                    # 袭击舰艇
+            port_strike                     # 港口袭击
+            attack_logistics                # 后勤打击
+            naval_kamikaze                  # 清扫水雷
+            naval_mines_planting            # 海上布雷
+            recon                           # 空中侦察
+            naval_patrol                    # 海军巡逻
+        }
+
         add_stats = {
             # Basic Abilities
             maximum_speed = 800             # 最大速度
