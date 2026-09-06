@@ -10,6 +10,8 @@
 
 - 【钢铁雄心4】 Hoi4 Multi Cheats :zap: [GitHub][9] :rocket: [52PCGAME][10]
 
+- 【装甲军团2】 PC2 Multi Cheats :zap: [GitHub][11]
+
 
 [1]: https://github.com/gnzhoutian/MultiCheats/tree/KCMultiCheats
 [2]: https://www.nexusmods.com/kingdomcomedeliverance/mods/1763?tab=posts
@@ -25,3 +27,6 @@
 
 [9]: https://github.com/gnzhoutian/MultiCheats/tree/Hoi4MultiCheats
 [10]: https://bbs.52pcgame.net/forum.php?mod=viewthread&tid=551078
+
+[11]: https://github.com/gnzhoutian/MultiCheats/tree/PC2MultiCheats
+
