@@ -13,6 +13,10 @@
 │   ├── events
 │   │   └── my_cheat_events.txt                             # 开局事件，含省份修改、国家修改
 │   ├── common
+│   │   ├── decisions
+│   │       ├── categories
+│   │       │   └── my_cheat_decision_categories.txt        # 决议分组
+│   │   │   └── my_cheat_decisions.txt                      # 新增决议，含基础设施、补给中心、铁路建设、核心添加
 │   │   ├── on_actions
 │   │   │   └── my_cheat_actions.txt                        # 开局事件触发
 │   │   ├── technologies
@@ -23,14 +27,14 @@
 │   │       │
 │   │       └── equipment
 │   │           └── modules
-│   │               └── zz_my_cheat_modules.txt             # 装备修改，含火箭引擎III调整、【新增坦克引擎】
+│   │               └── zz_my_cheat_modules.txt             # 装备修改，含火箭引擎III调整、坦克引擎新增
 │   ├── interface
-│   │   └── my_cheat_interface.gfx                          # 【新增坦克引擎】 图标声明
+│   │   └── my_cheat_interface.gfx                          # 图标声明【坦克引擎】
 │   ├── localisation
 │   │   ├── english
-│   │   │   └── my_cheat_localisation_l_english.yml         # 【新增坦克引擎】 英文描述
+│   │   │   └── my_cheat_localisation_l_english.yml         # 英文描述【坦克引擎、决议描述】
 │   │   └── simp_chinese
-│   │       └── my_cheat_localisation_l_simp_chinese.yml    # 【新增坦克引擎】 中文汉化
+│   │       └── my_cheat_localisation_l_simp_chinese.yml    # 中文汉化【坦克引擎、决议描述】
 │   ├── _docs
 │   │   ├── HOI4.md                                         # 游玩技巧说明
 │   │   └── 52PCGAME.md                                     # 52论坛帖子源码

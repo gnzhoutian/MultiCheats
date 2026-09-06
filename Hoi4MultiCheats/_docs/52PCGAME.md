@@ -51,7 +51,13 @@
 [b]如果各位看官觉得不错的话，[color=#ff0000]欢迎版主加精[/color]，欢迎同学们打赏。[/b]
 [color=#ff0000][b]附上MOD版下载，老规矩，回复可见，还收小费~[/b][/color]
 
-[hide][attach]319973[/attach][/hide]
+[hide][b][size=2]
+原版，兼容性较差，[color=#ff0000]坦克部分[/color]后续随着钢4更新可能存在[color=#ff0000]兼容性问题[/color]
+[attach]319973[/attach]
+
+新版，兼容性更好，[color=#ff0000]坦克部分[/color]调整为[color=#ff0000]坦克引擎修改，新增四项决议[/color]，实现方法不再赘述，大家自行解包查看即可
+[attach]320136[/attach]
+[/size][/b][/hide]
 
 [b]另：[/b][b]前 [color=#ff0000]88[/color] 名回帖随机 [color=#ff0000]88PB[/color]，小小心意，不成敬意~[/b][/align][/size][/font]
 ```
