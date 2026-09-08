@@ -59,32 +59,37 @@ function OnMapStart()
 end
 
 function AddPlayerHero()
-    -- 新增英雄，分别为坦克王牌、空战王牌、特种王牌
+    -- 新增英雄，分别为特种王牌、坦克王牌、空战王牌
     local heroesBasicInfo = {
-        {"Arno von Hochfeld", "/Game/Gui/Common/Heroes/DE/de_in_pnzr03.de_in_pnzr03"},      -- "阿诺·冯·霍赫费尔德"
-        {"Dietrich von Eckhardt", "/Game/Gui/Common/Heroes/DE/de_in_pnzr05.de_in_pnzr05"},  -- "迪特里希·冯·埃克哈特"
-        {"Georg von Kaiser", "/Game/Gui/Common/Heroes/DE/de_in_stug01.de_in_stug01"},       -- "格奥尔格·冯·凯泽"
-        {"Gernot von Ritter", "/Game/Gui/Common/Heroes/DE/de_in_stug02.de_in_stug02"},      -- "格诺特·冯·里特"
+        {"Arno von Hochfeld", "/Game/Gui/Common/Heroes/DE/de_in_05.de_in_05"},              -- "阿诺·冯·霍赫费尔德"
+        {"Dietrich von Eckhardt", "/Game/Gui/Common/Heroes/DE/de_in_06.de_in_06"},          -- "迪特里希·冯·埃克哈特"
+        {"Georg von Kaiser", "/Game/Gui/Common/Heroes/DE/de_in_07.de_in_07"},               -- "格奥尔格·冯·凯泽"
+        {"Gernot von Ritter", "/Game/Gui/Common/Heroes/DE/de_in_08.de_in_08"},              -- "格诺特·冯·里特"
 
-        {"Gerold von Ritter", "/Game/Gui/Common/Heroes/DE/de_af_02.de_af_02"},              -- "格罗尔德·冯·里特"
-        {"Konrad von Hartmann", "/Game/Gui/Common/Heroes/DE/de_af_03.de_af_03"},            -- "康拉德·冯·哈特曼"
-        {"Oskar von Graf", "/Game/Gui/Common/Heroes/DE/de_af_16.de_af_16"},                 -- "奥斯卡·冯·格拉夫"
-        {"Peter von Berghoff", "/Game/Gui/Common/Heroes/DE/de_af_17.de_af_17"},             -- "彼得·冯·伯格霍夫"
+        {"Gerold von Ritter", "/Game/Gui/Common/Heroes/DE/de_in_pnzr03.de_in_pnzr03"},      -- "格罗尔德·冯·里特"
+        {"Konrad von Hartmann", "/Game/Gui/Common/Heroes/DE/de_in_pnzr05.de_in_pnzr05"},    -- "康拉德·冯·哈特曼"
+        {"Oskar von Graf", "/Game/Gui/Common/Heroes/DE/de_in_stug01.de_in_stug01"},         -- "奥斯卡·冯·格拉夫"
+        {"Peter von Berghoff", "/Game/Gui/Common/Heroes/DE/de_in_stug02.de_in_stug02"},     -- "彼得·冯·伯格霍夫"
 
-        {"Reinhardt von Herzog", "/Game/Gui/Common/Heroes/DE/de_in_06.de_in_06"},           -- "莱因哈特·冯·赫佐格"
-        {"Roland von Baum", "/Game/Gui/Common/Heroes/DE/de_in_07.de_in_07"},                -- "罗兰·冯·鲍姆"
-        {"Siegmund von Lindner", "/Game/Gui/Common/Heroes/DE/de_in_08.de_in_08"},           -- "西格蒙德·冯·林德纳"
-        {"Volker von Lindemann", "/Game/Gui/Common/Heroes/DE/de_in_05.de_in_05"},           -- "福尔克·冯·林德曼"
+        {"Reinhardt von Herzog", "/Game/Gui/Common/Heroes/DE/de_af_02.de_af_02"},           -- "莱因哈特·冯·赫佐格"
+        {"Roland von Baum", "/Game/Gui/Common/Heroes/DE/de_af_03.de_af_03"},                -- "罗兰·冯·鲍姆"
+        {"Siegmund von Lindner", "/Game/Gui/Common/Heroes/DE/de_af_16.de_af_16"},           -- "西格蒙德·冯·林德纳"
+        {"Volker von Lindemann", "/Game/Gui/Common/Heroes/DE/de_af_17.de_af_17"},           -- "福尔克·冯·林德曼"
     }
-    for _, heroBasicInfo in ipairs(heroesBasicInfo) do
-        CreateHeroBasic(heroBasicInfo[1] .. " I", heroBasicInfo[2])                         -- 属性类
+
+    for index, heroBasicInfo in ipairs(heroesBasicInfo) do
+        if index > 4 then
+            CreateHeroBasic(heroBasicInfo[1] .. " I", heroBasicInfo[2])                     -- 属性类 歼灭流
+        else
+            CreateHeroCapture(heroBasicInfo[1] .. " I", heroBasicInfo[2])                   -- 属性类 俘获流
+        end
         CreateHeroDamage(heroBasicInfo[1] .. " II", heroBasicInfo[2])                       -- 伤害类
         CreateHeroImmune(heroBasicInfo[1] .. " III", heroBasicInfo[2])                      -- 免疫类
     end
 end
 
 function CreateHeroBasic(name, portrait)
-    -- 属性类
+    -- 属性类 歼灭流
     local hero = NewHero()
     hero.portrait = portrait
     hero.name = NSLOCTEXT("cheat_heroes", string.gsub(name, " ", "_"), name)
@@ -99,6 +104,28 @@ function CreateHeroBasic(name, portrait)
         {type = TargetType.Hard,    mod = 8},       -- 对硬攻击 +8
         {type = TargetType.Air,     mod = 8},       -- 对空攻击 +8
         {type = TargetType.Naval,   mod = 8},       -- 对海攻击 +8
+    }
+    local action = world:MakeNewHeroAction(0, hero)
+    action.silent = true
+    world:Exec(action)
+end
+
+function CreateHeroCapture(name, portrait)
+    -- 属性类 俘获流
+    local hero = NewHero()
+    hero.portrait = portrait
+    hero.name = NSLOCTEXT("cheat_heroes", string.gsub(name, " ", "_"), name)
+    hero.modifiers = {
+        {type = Spotting,           mod = 4},       -- 视野 +4
+        {type = Ammo,               mod = 8},       -- 弹药 +8
+        {type = Speed,              mod = 80},      -- 移动 +8
+        {type = Fuel,               mod = 80},      -- 燃料 +8
+    }
+    hero.extra_traits = {
+        UnitTrait.SuppressingFire,          -- 火力压制（火炮特性）：该单位造成伤害的大部分将以压制，而不是击杀的形式呈现
+        UnitTrait.OverwhelmingAttack,       -- 压倒性攻击（英雄技能）：任何对敌方单位的攻击都将被迫使其撤退
+        UnitTrait.Envelopment,              -- 包围（英雄技能）：阻止敌人逃跑，因此他们只能投降
+        UnitTrait.Scavenger,                -- 搜刮者（英雄技能）：从投降敌人身上能够俘获双倍装备
     }
     local action = world:MakeNewHeroAction(0, hero)
     action.silent = true
@@ -199,6 +226,11 @@ runany Victory 0                        -- 直接胜利，进入下一个章节
 - 【缴获】我想大量缴获应该怎么办？      -- 炮兵+战略轰炸机压制敌方， 压倒性攻击+包围的中低伤害坦克进攻
 - 【缴获】是否可以替换为纯缴获流？      -- 不建议，缴获流碾压不生效，持续作战能力不足
 
+- 【缴获】缴获流推荐带哪些技能？        -- 火力压制、压倒性攻击、包围、搜刮者，这几个都推荐，无法反击推荐，不带的损失也可以接受
+- 【缴获】伤害过高会影响缴获吗？        -- 有了火力压制后，急速攻击 和 整合者基本不影响伤害
+- 【缴获】缴获流不推荐带哪些技能？      -- 压路机单独没有用，碾压和俘获相冲，扫雷和火力压制相冲，多个双倍攻击不会叠加
+- 【缴获】缴获流对飞机生效吗？          -- 飞机不能缴获，飞机攻击飞机不能缴获，飞机攻击地面也不能缴获
+
 - 【ZOC】侦察车过ZOC时移动点如何消耗?   -- 仍然按地形消耗移动点数，不对存在额外消耗，只是限制移动一格
 - 【ZOC】免疫区域控制可以去掉？         -- 可以去掉，不影响移动范围，阶段性移动已经基本可以替代了，还能更容易区分战线
 - 【ZOC】区域控制如何影响补给险？       -- 从“现实角度”来理解，你的补给线必须经过一个未被争夺的六边形格子，即敌方单位周边六格
@@ -270,6 +302,12 @@ hero.extra_traits = {{
 ## 五、指挥官特质（大全）
 
 ```json
+// 杀手小队未修改时，选择优先级
+"AggressiveDeployment": 2,          // 进攻部署         战术类，友方单位从载具上部署时将不会损失其攻击动作
+"TrophiesOfWar": 2,                 // 战争奖杯         后勤类，迫使敌方单位投降时获得双倍俘获装备和双倍威望
+"ForceConcentration": 1,            // 力量集中         后勤类，每个单位能够额外指派一名英雄
+"KillerTeam": 2,                    // 杀手小队         后勤类，游戏开始时获得额外的三名英雄
+
 // 正面特质
 "InfantryGeneral": 2,               // 步兵将领         后勤类，降低25%所有步兵单位栏位消耗。
 "PanzerGeneral": 2,                 // 装甲之王         后勤类，降低25%所有坦克单位栏位消耗
