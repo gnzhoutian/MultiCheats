@@ -52,6 +52,7 @@ SaveCore("end_of_MainInit")
 ### 2.4 英雄创建
 
 ```lua
+------------------------------------------------------------------------------------------------------------------------
 -- 机制：通过内置函数 OnMapStart()触发英雄创建函数，lua参考dlc中写法，需要勾选杀手小队特质后，才会允许首回合挂载英雄
 -- Cheat Hero Code: PanzerCorps2\Content\Campaigns\Main\PolandNorth1.lua
 function OnMapStart()
@@ -125,7 +126,7 @@ function CreateHeroCapture(name, portrait)
         UnitTrait.SuppressingFire,          -- 火力压制（火炮特性）：该单位造成伤害的大部分将以压制，而不是击杀的形式呈现
         UnitTrait.OverwhelmingAttack,       -- 压倒性攻击（英雄技能）：任何对敌方单位的攻击都将被迫使其撤退
         UnitTrait.Envelopment,              -- 包围（英雄技能）：阻止敌人逃跑，因此他们只能投降
-        UnitTrait.Scavenger,                -- 搜刮者（英雄技能）：从投降敌人身上能够俘获双倍装备
+        UnitTrait.EntKiller4,               -- 工事杀手 4X（重型火炮单位特性，英雄技能）：每次攻击摧毁4点工事等级
     }
     local action = world:MakeNewHeroAction(0, hero)
     action.silent = true
@@ -171,6 +172,7 @@ function CreateHeroImmune(name, portrait)
     action.silent = true
     world:Exec(action)
 end
+------------------------------------------------------------------------------------------------------------------------
 ```
 
 ## 三、游玩攻略
@@ -226,7 +228,7 @@ runany Victory 0                        -- 直接胜利，进入下一个章节
 - 【缴获】我想大量缴获应该怎么办？      -- 炮兵+战略轰炸机压制敌方， 压倒性攻击+包围的中低伤害坦克进攻
 - 【缴获】是否可以替换为纯缴获流？      -- 不建议，缴获流碾压不生效，持续作战能力不足
 
-- 【缴获】缴获流推荐带哪些技能？        -- 火力压制、压倒性攻击、包围、搜刮者，这几个都推荐，无法反击推荐，不带的损失也可以接受
+- 【缴获】缴获流推荐带哪些技能？        -- 火力压制、压倒性攻击、包围、工事杀手4X，这四个强烈推荐，搜刮者、无法反击一般推荐，不带的损失也可以接受
 - 【缴获】伤害过高会影响缴获吗？        -- 有了火力压制后，急速攻击 和 整合者基本不影响伤害
 - 【缴获】缴获流不推荐带哪些技能？      -- 压路机单独没有用，碾压和俘获相冲，扫雷和火力压制相冲，多个双倍攻击不会叠加
 - 【缴获】缴获流对飞机生效吗？          -- 飞机不能缴获，飞机攻击飞机不能缴获，飞机攻击地面也不能缴获
@@ -296,6 +298,11 @@ hero.extra_traits = {{
     UnitTrait.ZeroSlots,                -- 无需栏位（英雄技能）：单位的栏位消耗降低至0
     UnitTrait.ReducedSlots,             -- 减少栏位（英雄技能）：单位栏位的消耗降低50%
     UnitTrait.IgnoresZOC,               -- 无视区域控制（英雄技能）：移动时无视敌方单位的区域控制效果
+    
+    UnitTrait.SuppressingFire,          -- 火力压制（火炮特性）：该单位造成伤害的大部分将以压制，而不是击杀的形式呈现
+    UnitTrait.OverwhelmingAttack,       -- 压倒性攻击（英雄技能）：任何对敌方单位的攻击都将被迫使其撤退
+    UnitTrait.Scavenger,                -- 搜刮者（英雄技能）：从投降敌人身上能够俘获双倍装备
+    UnitTrait.EntKiller4,               -- 工事杀手 4X（重型火炮单位特性，英雄技能）：每次攻击摧毁4点工事等级
 }}
 ```
 
@@ -303,6 +310,7 @@ hero.extra_traits = {{
 
 ```json
 // 杀手小队未修改时，选择优先级
+"Retrograde" : -2,                  // 回退             后勤类，获得新装备的时间会比平时推迟六个月
 "AggressiveDeployment": 2,          // 进攻部署         战术类，友方单位从载具上部署时将不会损失其攻击动作
 "TrophiesOfWar": 2,                 // 战争奖杯         后勤类，迫使敌方单位投降时获得双倍俘获装备和双倍威望
 "ForceConcentration": 1,            // 力量集中         后勤类，每个单位能够额外指派一名英雄
