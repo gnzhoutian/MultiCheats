@@ -1,5 +1,12 @@
 # PanzerCorps2 修改笔记
 
+## TODO
+
+1. MineSweeper 和 MineKiller 区别？
+2. 俘获流用什么兵种比较合适？ 步兵，侦察兵？
+3. 俘获流能触发碾压吗？ 如果能则可以保留弹药，如果不能则加硬攻
+4. 装甲车模式下，是不能进行扫雷的
+
 ## 一、参考链接
 
 - [《装甲军团2》指挥官特质的个人简评](https://www.bilibili.com/opus/945112312332681220)
@@ -34,6 +41,16 @@
 "dismiss_hero_prestige": 1000,      // 英雄退钱(可选)   8000
 "max_heroes_per_unit": 3,           // 英雄上限(可选)   8
 "KillerTeam": 2,                    // 杀手小队(建议)   -32
+"related_classes" : [               // 侦查类互转(建议)
+    {
+        "classes" : [
+            "Infantry",
+            "Recon",
+            "TacticalBomber"
+        ],
+        "penalty" : 1000
+    },
+]
 ```
 
 ### 2.3 英雄继承
@@ -106,6 +123,9 @@ function CreateHeroBasic(name, portrait)
         {type = TargetType.Air,     mod = 8},       -- 对空攻击 +8
         {type = TargetType.Naval,   mod = 8},       -- 对海攻击 +8
     }
+    hero.defense_modifiers = {{
+        type = DefenseType.Ground,  mod = 8},       -- 地面防御 +8
+    }
     local action = world:MakeNewHeroAction(0, hero)
     action.silent = true
     world:Exec(action)
@@ -118,15 +138,20 @@ function CreateHeroCapture(name, portrait)
     hero.name = NSLOCTEXT("cheat_heroes", string.gsub(name, " ", "_"), name)
     hero.modifiers = {
         {type = Spotting,           mod = 4},       -- 视野 +4
-        {type = Ammo,               mod = 8},       -- 弹药 +8
+        -- {type = Ammo,               mod = 8},       -- 弹药 +8
         {type = Speed,              mod = 80},      -- 移动 +8
         {type = Fuel,               mod = 80},      -- 燃料 +8
+    }
+    hero.attack_modifiers = {
+        -- {type = TargetType.Soft,    mod = 8},       -- 对软攻击 +8
+        {type = TargetType.Hard,    mod = 8},       -- 对硬攻击 +8
     }
     hero.extra_traits = {
         UnitTrait.SuppressingFire,          -- 火力压制（火炮特性）：该单位造成伤害的大部分将以压制，而不是击杀的形式呈现
         UnitTrait.OverwhelmingAttack,       -- 压倒性攻击（英雄技能）：任何对敌方单位的攻击都将被迫使其撤退
         UnitTrait.Envelopment,              -- 包围（英雄技能）：阻止敌人逃跑，因此他们只能投降
-        UnitTrait.EntKiller4,               -- 工事杀手 4X（重型火炮单位特性，英雄技能）：每次攻击摧毁4点工事等级
+        UnitTrait.EntKiller4,               -- 工事杀手 4X（英雄技能）：每次攻击摧毁4点工事等级
+        UnitTrait.Scavenger,                -- 搜刮者（英雄技能）：从投降敌人身上能够俘获双倍装备
     }
     local action = world:MakeNewHeroAction(0, hero)
     action.silent = true
@@ -146,6 +171,7 @@ function CreateHeroDamage(name, portrait)
 
         UnitTrait.IncMaxOverstrength,       -- 整合者（英雄技能）：可以将超出常规的兵力整合至一个单位，使其兵力加强上限+5
         UnitTrait.CombatLuck,               -- 战斗运势（英雄技能）：战斗结果绝对不会低于预期
+        UnitTrait.MineKiller,               -- 地雷克星（工兵单位技能）：xxxx 排雷
         UnitTrait.PhasedMovement,           -- 阶段性移动（侦查单位特性）：可在其移动点限制范围内逐步移动，该能力同样允许单位悄悄通过敌人的控制区域
     }
     local action = world:MakeNewHeroAction(0, hero)
@@ -166,6 +192,7 @@ function CreateHeroImmune(name, portrait)
 
         UnitTrait.Vigilant,                 -- 机警（英雄技能）：阻止敌人利用单位的近身防御力
         UnitTrait.SixthSense,               -- 第六感（英雄技能）：免疫伏击
+        UnitTrait.NoRetaliation,            -- 无法反击（英雄技能）：攻击时，敌方单位不会回击
         UnitTrait.ReducedSlots,             -- 减少栏位（英雄技能）：单位栏位的消耗降低50%
     }
     local action = world:MakeNewHeroAction(0, hero)
